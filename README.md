@@ -14,10 +14,11 @@ Guitar -> PC -> Python [RNN probably] -> Solid State Amp (PC) -> Speaker
 Guitar -> MicroController -> FPGA [RNN probably] -> Solid State Amp -> Speaker
 
 ## Roadmap
-1. Record time synchronized raw guitar output and amp head output (amp settings fixed).
-2. Develop NN & evaluate effectiveness of simulation (python)
-3. Record data from (1) and include amp knob values
-4. Modify NN to evaluate ability to simulate full amp setting range (python)
-5. Evaluate feasibility & cost of porting NN to FPGA
-6. Port NN to FGPA, construct hardware for evaluation of realtime/delay.
-7. Implement for use with real guitar & speaker (ADC, microcontroller, FGPA, DAC, power amp)
+1. [x] Make Github repo
+2. [ ] Record time synchronized raw guitar output and amp head output (amp settings fixed)
+3. [ ] Develop NN & evaluate effectiveness of simulation (python)
+4. [ ] Record data from (1) and include amp knob values
+5. [ ] Modify NN to evaluate ability to simulate full amp setting range (python)
+6. [ ] Evaluate feasibility & cost of porting NN to FPGA
+7. [ ] Port NN to FGPA, construct hardware for evaluation of realtime/delay
+8. [ ] Implement for use with real guitar & speaker (ADC, microcontroller, FGPA, DAC, power amp)
