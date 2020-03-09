@@ -1,0 +1,17 @@
+gist: strat into clean HT5
+input: strat
+output: HT5 effect loop send
+
+settings:
+    clean: on
+        level: 3
+        tone: 6
+    OD: off
+        gain:
+        level:
+        bass:
+        mid:
+        treble:
+        isf:
+    reverb: on
+        level:3

@@ -1,0 +1,31 @@
+gist: strat into chorus effect on ME50
+input: strat
+output: ME50
+
+settings:
+    master: 6
+    OD: off
+        effect:
+        drive:
+        bottom:
+        tone:
+        level:
+    mod: on
+        effect: chorus
+        rate: 3
+        depth: 7
+        level: 11
+    delay: off
+        effect:
+        time: 
+        feedback:
+        level:
+    tonemod: off
+        effect:
+    compressor: off
+        sustain:
+        level:
+    NS: off
+        threshold:
+    reverb: off
+        level:
