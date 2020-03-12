@@ -14,13 +14,15 @@ Guitar -> Valve Amp (Vacuum Tube) -> Speaker
 
 Guitar -> PC -> [DNN of some type] -> Solid State Amp (PC) -> Speaker
 
-Guitar -> MicroController -> FPGA [RNN probably] -> Solid State Amp -> Speaker
+Guitar -> MicroController -> FPGA [DNN of some type] -> Solid State Amp -> Speaker
 
 ## Prototyping
 
 ### Sample Recording
 
-Teensy with [audio shield][audioshield]
+Teensy with [audio shield][audioshield] used to record 2-channel 16-bit audio at 44k.1 kHz.
+[1.4" taps][mono_tap] and a [stereo splitter][stereo_splitter] to record the input signal into the left channel (0), and the output signal to the right channel (1).
+The 
 
 ## Iteration 1
 
@@ -30,7 +32,7 @@ After finding [this paper][RR2019], the aim of the first step of this project wi
 
 ![network architecture from Ramirez, Reiss 2019][architecture]
 
-## Roadmap
+## Roadmap/Options
 
 - [x] Make Github repo
 
@@ -91,3 +93,8 @@ Book on ML on microcontrollers [TinyML][tinyml]
 [RR2019]: https://arxiv.org/pdf/1810.06603.pdf
 
 [audioshield]: https://www.pjrc.com/store/teensy3_audio.html
+
+[stereo_splitter]: https://www.amazon.com/gp/product/B005HGM1D6
+
+[mono_tap]: https://www.amazon.com/gp/product/B000068O53/
+
