@@ -4,7 +4,7 @@ Attempting to recreate the effect of a guitar amp on the raw input signal.
 
 Ideally it will replicate the sound of a valve amp faithfully from just the guitar input signal. [Vintage/Iconic amplifiers](https://www.guitarworld.com/gear/10-most-iconic-guitar-amps) are super expensive and/or rare. By recreating the sound using machine learning, I expect that a closer result can be achieved compared to parameterized models such as those used in modelling amplifiers (which are also prohibitively expensive). The question will be whether the resulting simulation can be run in real time and with minimal delay.
 
-## Process
+## Process 
 
 ### Standard
 
@@ -12,21 +12,32 @@ Guitar -> Valve Amp (Vacuum Tube) -> Speaker
 
 ### This
 
-Guitar -> PC -> Python [RNN probably] -> Solid State Amp (PC) -> Speaker
+Guitar -> PC -> [DNN of some type] -> Solid State Amp (PC) -> Speaker
 
 Guitar -> MicroController -> FPGA [RNN probably] -> Solid State Amp -> Speaker
+
+## Prototyping
+
+### Sample Recording
+
+Teensy with [audio shield][audioshield]
+
+## Iteration 1
+
+After finding [this paper][RR2019], the aim of the first step of this project will be to train it using samples recorded here in order to evaulate the architecture.
+
+### Architecture
+
+![network architecture from Ramirez, Reiss 2019][architecture]
 
 ## Roadmap
 
 - [x] Make Github repo
-  
-We are here
-***
 
 - [ ] Gather Samples
   - 44.1 KHz, 16 bit
-  - [ ] Raw Guitar & Effect Pedal (fixed settings)
-  - [ ] Raw Guitar & Amp Head (fixed settings)
+  - [x] Raw Guitar & Effect Pedal (fixed settings)
+  - [x] Raw Guitar & Amp Head (fixed settings)
   - [ ] Raw Guitar & Effect Pedal (variable settings)
   - [ ] Raw Guitar & Amp Head (variable settings)
 
@@ -58,9 +69,25 @@ We are here
 
 ## Links
 
-[teensy protopedal](https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal/all)  
-[teensy guitar shield ($$$)](https://www.tindie.com/products/Blackaddr/arduino-teensy-guitar-audio-shield/)  
-[tensorflow on teensy](https://forum.pjrc.com/threads/57441-Tensorflow-on-Teensy)  
-[tinyml book](https://tinymlbook.com/)  
-[teensy 4 audio shield](https://www.pjrc.com/store/teensy3_audio.html)  
-[teensy audio library](https://www.pjrc.com/teensy/td_libs_Audio.html)
+Relevant paper on NN modelling of audio effects: [Modeling of nonlinear audio effects with end-to-end deep neural networks][RR2019]
+[teensy 4 audio shield][audioshield]
+[teensy audio library][teensy_audio]
+[tensorflow on teensy][teensytf]
+Book on ML on microcontrollers [TinyML][tinyml]
+
+
+[teensy protopedal]: https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal/all
+
+[teensy guitar shield ($$$)]: https://www.tindie.com/products/Blackaddr/arduino-teensy-guitar-audio-shield/
+
+[teensytf]: https://forum.pjrc.com/threads/57441-Tensorflow-on-Teensy  
+
+[tinyml]: https://tinymlbook.com/
+  
+[teensy_audio]: https://www.pjrc.com/teensy/td_libs_Audio.html
+
+[architecture]: ./figures/NN_arch.png "Network Architecure"
+
+[RR2019]: https://arxiv.org/pdf/1810.06603.pdf
+
+[audioshield]: https://www.pjrc.com/store/teensy3_audio.html
