@@ -71,12 +71,11 @@ After finding [this paper][RR2019], the aim of the first step of this project wi
 
 ## Links
 
-Relevant paper on NN modelling of audio effects: [Modeling of nonlinear audio effects with end-to-end deep neural networks][RR2019]
-[teensy 4 audio shield][audioshield]
-[teensy audio library][teensy_audio]
-[tensorflow on teensy][teensytf]
-Book on ML on microcontrollers [TinyML][tinyml]
-
+Relevant paper on NN modelling of audio effects: [Modeling of nonlinear audio effects with end-to-end deep neural networks][RR2019]  
+[teensy 4 audio shield][audioshield]  
+[teensy audio library][teensy_audio]  
+[tensorflow on teensy][teensytf]  
+Book on ML on microcontrollers [TinyML][tinyml]  
 
 [teensy protopedal]: https://learn.sparkfun.com/tutorials/proto-pedal-example-programmable-digital-pedal/all
 
